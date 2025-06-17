@@ -2,6 +2,10 @@ package org.hgnv11.util.mathutil.core;
 
 public class MathUtility {
 
+    public int add(int a, int b) {
+        return a + b;
+    }
+
     public static int sumEvenDigits(int number) {
         number = Math.abs(number); // Handle negative numbers
         int sum = 0;
@@ -14,4 +18,6 @@ public class MathUtility {
         }
         return sum;
     }
+
+
 }

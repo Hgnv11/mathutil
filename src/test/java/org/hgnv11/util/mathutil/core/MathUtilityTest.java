@@ -1,10 +1,29 @@
 package org.hgnv11.util.mathutil.core;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
 public class MathUtilityTest {
+    private MathUtility mathUtility;
+
+    @BeforeMethod(alwaysRun = true)
+    public void setUp() {
+        mathUtility = new MathUtility();
+    }
+
+    @Test(groups = {"basicMath"})
+    public void testAddition() {
+        assertEquals(mathUtility.add(3, 5), 8);
+    }
+
+    @Test(groups = {"basicMath"}, dependsOnMethods = {"testAddition"})
+    public void testAdditionDependent() {
+        assertEquals(mathUtility.add(4, 4), 8);
+    }
 
     @Test
     public void testSumEvenDigits_123_Returns2() {
@@ -16,23 +35,13 @@ public class MathUtilityTest {
         assertEquals(MathUtility.sumEvenDigits(-227), 4); // 2 + 2
     }
 
-    @Test
-    public void testSumEvenDigits_Negative432_Returns6() {
-        assertEquals(MathUtility.sumEvenDigits(-432), 6); // 4 + 2
+    @AfterMethod
+    public void tearDown() {
+        mathUtility = null;
     }
 
-    @Test
-    public void testSumEvenDigits_627_Returns8() {
-        assertEquals(MathUtility.sumEvenDigits(627), 8);  // 6 + 2
-    }
-
-    @Test
-    public void testSumEvenDigits_Zero_Returns0() {
-        assertEquals(MathUtility.sumEvenDigits(0), 0);    // edge case
-    }
-
-    @Test
-    public void testSumEvenDigits_AllOddDigits_Returns0() {
-        assertEquals(MathUtility.sumEvenDigits(13579), 0); // no even digits
+    @AfterClass
+    public void afterClass() {
+        System.out.println("Tất cả các bài kiểm tra trong DependencyTests đã hoàn thành");
     }
 }

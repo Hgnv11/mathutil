@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="AllMathTests">
-    <test name="RunAllMathTestClasses">
+<suite name="MathUtilityTestSuite" parallel="classes">
+    <test name="MathUtilityTests">
         <classes>
             <class name="org.hgnv11.util.mathutil.core.MathUtilityTest"/>
             <class name="org.hgnv11.util.mathutil.core.MathUtilityDDTTest"/>
