@@ -39,7 +39,7 @@
                 <version>3.0.0</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
