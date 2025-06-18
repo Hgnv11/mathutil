@@ -1,12 +1,17 @@
-<suite name="MathUtilityTestSuiteV" verbose="4">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MathUtilityTestSuiteG">
     <listeners>
         <listener class-name="org.testng.reporters.EmailableReporter2" />
         <listener class-name="org.testng.reporters.XMLReporter" />
     </listeners>
-    <test name="MathUtilityTests">
+    <test name="BasicMathGroupTests">
+        <groups>
+            <run>
+                <include name="basicMath" />
+            </run>
+        </groups>
         <classes>
             <class name="org.hgnv11.util.mathutil.core.MathUtilityTest" />
-            <class name="org.hgnv11.util.mathutil.core.MathUtilityDDTTest"/>
         </classes>
     </test>
 </suite>

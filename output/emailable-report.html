@@ -8,38 +8,12 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">MathUtilityTestSuiteP</th></tr>
-<tr><td><a href="#t0">MathUtilityTests</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">155</td><td></td><td></td></tr>
+<tr><th colspan="8">MathUtilityTestSuiteG</th></tr>
+<tr><td><a href="#t0">BasicMathGroupTests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">122</td><td>basicMath</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MathUtilityTestSuiteP</th></tr></tbody><tbody id="t0"><tr><th colspan="4">MathUtilityTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">org.hgnv11.util.mathutil.core.MathUtilityDDTTest</td><td><a href="#m0">testSumEvenDigits_ValidCases</a></td><td rowspan="2">1750216475264</td><td rowspan="2">0</td></tr><tr class="failedeven"><td><a href="#m1">testSumEvenDigits_ValidCases</a></td></tr><tr><th colspan="4">MathUtilityTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">org.hgnv11.util.mathutil.core.MathUtilityDDTTest</td><td><a href="#m2">testSumEvenDigits_ValidCases</a></td><td rowspan="4">1750216475262</td><td rowspan="4">0</td></tr><tr class="passedeven"><td><a href="#m3">testSumEvenDigits_ValidCases</a></td></tr><tr class="passedeven"><td><a href="#m4">testSumEvenDigits_ValidCases</a></td></tr><tr class="passedeven"><td><a href="#m5">testSumEvenDigits_ValidCases</a></td></tr><tr class="passedodd"><td rowspan="4">org.hgnv11.util.mathutil.core.MathUtilityTest</td><td><a href="#m6">testAddition</a></td><td rowspan="1">1750216475227</td><td rowspan="1">5</td></tr><tr class="passedodd"><td><a href="#m7">testAdditionDependent</a></td><td rowspan="1">1750216475283</td><td rowspan="1">1</td></tr><tr class="passedodd"><td><a href="#m8">testSumEvenDigits_123_Returns2</a></td><td rowspan="1">1750216475262</td><td rowspan="1">2</td></tr><tr class="passedodd"><td><a href="#m9">testSumEvenDigits_Negative227_Returns4</a></td><td rowspan="1">1750216475270</td><td rowspan="1">1</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MathUtilityTestSuiteG</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BasicMathGroupTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.hgnv11.util.mathutil.core.MathUtilityTest</td><td><a href="#m0">testAddition</a></td><td rowspan="1">1750219685372</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m1">testAdditionDependent</a></td><td rowspan="1">1750219685398</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>MathUtilityTests</h2><h3 id="m0">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>-432</td><td>5</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [5] but found [6]
-	at org.hgnv11.util.mathutil.core.MathUtilityDDTTest.testSumEvenDigits_ValidCases(MathUtilityDDTTest.java:26)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.&lt;init&gt;(FutureTask.java:151)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>123</td><td>7</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: expected [7] but found [2]
-	at org.hgnv11.util.mathutil.core.MathUtilityDDTTest.testSumEvenDigits_ValidCases(MathUtilityDDTTest.java:26)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.&lt;init&gt;(FutureTask.java:151)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>-227</td><td>4</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>13579</td><td>0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>0</td><td>0</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">org.hgnv11.util.mathutil.core.MathUtilityDDTTest#testSumEvenDigits_ValidCases</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>627</td><td>8</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">org.hgnv11.util.mathutil.core.MathUtilityTest#testAddition</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">org.hgnv11.util.mathutil.core.MathUtilityTest#testAdditionDependent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">org.hgnv11.util.mathutil.core.MathUtilityTest#testSumEvenDigits_123_Returns2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">org.hgnv11.util.mathutil.core.MathUtilityTest#testSumEvenDigits_Negative227_Returns4</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>BasicMathGroupTests</h2><h3 id="m0">org.hgnv11.util.mathutil.core.MathUtilityTest#testAddition</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.hgnv11.util.mathutil.core.MathUtilityTest#testAdditionDependent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-18T11:08:05 ICT" name="MathUtilityTestSuiteG" finished-at="2025-06-18T11:08:05 ICT" duration-ms="122">
+    <groups>
+      <group name="basicMath">
+        <method signature="MathUtilityTest.testAddition()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" name="testAddition" class="org.hgnv11.util.mathutil.core.MathUtilityTest"/>
+        <method signature="MathUtilityTest.testAdditionDependent()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" name="testAdditionDependent" class="org.hgnv11.util.mathutil.core.MathUtilityTest"/>
+      </group> <!-- basicMath -->
+    </groups>
+    <test started-at="2025-06-18T11:08:05 ICT" name="BasicMathGroupTests" finished-at="2025-06-18T11:08:05 ICT" duration-ms="122">
+      <class name="org.hgnv11.util.mathutil.core.MathUtilityTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" started-at="2025-06-18T11:08:05 ICT" name="setUp" finished-at="2025-06-18T11:08:05 ICT" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddition()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" started-at="2025-06-18T11:08:05 ICT" name="testAddition" finished-at="2025-06-18T11:08:05 ICT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddition -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" started-at="2025-06-18T11:08:05 ICT" name="setUp" finished-at="2025-06-18T11:08:05 ICT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAdditionDependent()[pri:0, instance:org.hgnv11.util.mathutil.core.MathUtilityTest@add0edd]" started-at="2025-06-18T11:08:05 ICT" name="testAdditionDependent" finished-at="2025-06-18T11:08:05 ICT" depends-on-methods="org.hgnv11.util.mathutil.core.MathUtilityTest.testAddition" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdditionDependent -->
+      </class> <!-- org.hgnv11.util.mathutil.core.MathUtilityTest -->
+    </test> <!-- BasicMathGroupTests -->
+  </suite> <!-- MathUtilityTestSuiteG -->
+</testng-results>
