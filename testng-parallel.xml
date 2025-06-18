@@ -1,5 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MathUtilityTestSuite" parallel="classes">
+<suite name="MathUtilityTestSuiteP" parallel="classes">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>
     <test name="MathUtilityTests">
         <classes>
             <class name="org.hgnv11.util.mathutil.core.MathUtilityTest"/>

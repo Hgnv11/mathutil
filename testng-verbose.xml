@@ -1,0 +1,11 @@
+<suite name="MathUtilityTestSuiteV" verbose="3">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>
+    <test name="MathUtilityTests">
+        <classes>
+            <class name="org.hgnv11.util.mathutil.core.MathUtilityTest" />
+            <class name="org.hgnv11.util.mathutil.core.MathUtilityDDTTest"/>
+        </classes>
+    </test>
+</suite>
