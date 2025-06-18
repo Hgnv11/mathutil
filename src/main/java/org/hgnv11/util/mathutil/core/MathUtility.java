@@ -7,7 +7,7 @@ public class MathUtility {
     }
 
     public static int sumEvenDigits(int number) {
-        number = Math.abs(number); // Handle negative numbers
+        number = Math.abs(number);
         int sum = 0;
         while (number > 0) {
             int digit = number % 10;
