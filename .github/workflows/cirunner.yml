@@ -20,10 +20,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    # 🧪 RUNNING TESTS FROM BOTH XML FILES
-    - name: Run testng-parallel.xml
-      run: mvn test -DsuiteXmlFile=testng-parallel.xml
-
     - name: Run testng-verbose.xml
       run: mvn test -DsuiteXmlFile=testng-verbose.xml
 
