@@ -2,39 +2,39 @@ name: Math Utility Project (CI included) | © 2025 by Hgnv11
 
 on:
   push:
-    branches: [ "main" ]    # Lấy code từ nhánh main nếu có ai push code lên. Có thể thay bằng nhánh dev... 
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]    # Lấy code từ nhánh main nếu có ai gửi pull request. Có thể thay bằng nhánh dev...  
-
+    branches: [ "main" ]
 
 jobs:
-  build:    # Những công việc dev làm thường ngày: lấy code, build, chạy test, đóng gói, gửi build, hosting...
-
-
-    runs-on: ubuntu-latest    # Mượn máy ảo-server Ubuntu trên xứ Mỹ để build, đóng gói app
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4    # Lấy code từ kho main/dev thảy vào máy ảo của GitHub để chuẩn bị build app ở các bước phía dưới
+    - uses: actions/checkout@v4
 
     - name: Set up JDK 21
-      uses: actions/setup-java@v3    # Khai báo cần dùng phiên bản JDK nào đó trên server ảođể build
+      uses: actions/setup-java@v3
       with:
-        java-version: '21'         # Khai báo sử dụng phiên bản JDK 24 để build, có thể chọn version khác
-        distribution: 'temurin'    # Khai báo sử dụng phiên bản biến thể JDK tên là "temurin"
+        java-version: '21'
+        distribution: 'temurin'
         cache: maven
+
+    # 🧪 RUNNING TESTS FROM BOTH XML FILES
+    - name: Run testng-parallel.xml
+      run: mvn test -DsuiteXmlFile=testng-parallel.xml
+
+    - name: Run testng-verbose.xml
+      run: mvn test -DsuiteXmlFile=testng-verbose.xml
+
     - name: Build with Maven
-      run: mvn -B package --file pom.xml    # Quá trình build sẽ cần đến file cấu hình pom.xml. Gọi lệnh mvn huyền thoại - tự chạy Unit Test nếu có!!!
-      
-    - name: Distribute jar-war file    # Gửi file .jar .war đi đâu, CD/DevOps nhảy vào ...
-      run: mkdir staging && cp target/*.jar staging  # Tạo thư mục staging chứa file .jar .war sau khi build phục vụ cho việc download sản phẩm      
-     
-    - name: Make hyperlink to jar-war file    # Tạo hyperlink để download build 
+      run: mvn -B package --file pom.xml
+
+    - name: Distribute jar-war file
+      run: mkdir staging && cp target/*.jar staging
+
+    - name: Make hyperlink to jar-war file
       uses: actions/upload-artifact@v4
       with:
-          name: cham_de_lay_jar    # Hyperlink để download build, app
-          path: staging
-
-# End of CI workflow file. 
-
-# BẠN CÓ THỂ HỌC THÊM CÁC LỆNH CỦA GITHUB ACTIONS ĐỂ LÀM TIẾP QUY TRÌNH CD/DEVOPS Ở ĐÂY, 
-# ĐỂ ĐẨY CÁI OUTPUT, APP, BUILD SANG CÁC SERVER KHÁC: STAGING SERVER, PRODUCTION SERVER...
+        name: cham_de_lay_jar
+        path: staging
