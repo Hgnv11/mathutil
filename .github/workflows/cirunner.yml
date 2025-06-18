@@ -19,7 +19,10 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-
+        
+    - name: Run testng-parallel.xml
+      run: mvn test -DsuiteXmlFile=testng-parallel.xml
+      
     - name: Run testng-verbose.xml
       run: mvn test -DsuiteXmlFile=testng-verbose.xml
 
