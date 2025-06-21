@@ -25,14 +25,14 @@ public class MathUtilityTest {
         assertEquals(mathUtility.add(4, 4), 8);
     }
 
-    @Test
+    @Test (priority = 2)
     public void testSumEvenDigits_123_Returns2() {
-        assertEquals(MathUtility.sumEvenDigits(123), 2);  // 2
+        assertEquals(MathUtility.sumEvenDigits(123), 2);
     }
 
-    @Test
+    @Test (priority = 1)
     public void testSumEvenDigits_Negative227_Returns4() {
-        assertEquals(MathUtility.sumEvenDigits(-227), 4); // 2 + 2
+        assertEquals(MathUtility.sumEvenDigits(-227), 4);
     }
 
     @AfterMethod
